@@ -41,7 +41,7 @@ Para acessar o jogo click no [link](https://ATIVIDADE-9.wagner-santos-d.repl.co)
 ## Como Jogar
 
 - No jogo NIM, os jogadores se alternam nas jogadas para remover uma ou mais bolinhas de um ou mais montes. 
-- O número de bolinhas que podem ser removidos em cada jogada é determinado pelo jogador, mas pelo menos um palito deve ser removido a cada jogada.
+- O número de bolinhas que podem ser removidos em cada jogada é determinado pelo jogador, mas pelo menos uma bolinha deve ser removida a cada jogada.
 - O objetivo do jogo é remover o última bolinha, e o jogador que conseguir fazer isso vence.
 - A ordem de jogada é determinada por sorteio no início do jogo.
 
