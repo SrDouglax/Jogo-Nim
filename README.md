@@ -17,7 +17,7 @@ Durante o jogo, cada jogador pode remover uma ou mais peças de uma coluna, e o 
 ---
 
 ## Como Executar
-Para acessar o jogo click no [link](). 
+Para acessar o jogo click no [link](https://jogo-nim.vercel.app/). 
 
 ---
 
