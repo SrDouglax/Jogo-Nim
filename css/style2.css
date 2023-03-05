@@ -1,0 +1,61 @@
+.bolinha{
+  width: 80px;
+  height:70px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  margin-top: 2px;
+}
+conteiner{
+  align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+ul{
+  list-style-type: none;
+}
+#caixa{
+  margin: auto;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 900px;
+  height: 300px;
+}
+
+#primeiro, #segundo, #terceiro, #quarto, #quinto{
+  margin-left: -50px;
+}
+#jogar{
+  align-items: center;
+  justify-content: center;
+  display:flex; 
+  height: 40px;
+  font-size: 28px;
+  padding: 2px 7px;
+}
+  #plays{
+    width: 900px;
+    margin: auto;
+  }
+
+#play1, #play2{
+  border-radius: 6px;
+  background-color: rgb(103, 184, 228);
+  border: solid 0.5px rgb(72, 70, 70);
+}
+
+#bolinhas{
+  display: none !important;
+  background-color: aqua;
+  margin: 18px;
+  height: max-content;
+  width: 900px;
+  justify-items: center ;
+  }
+
+  .col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
