@@ -17,7 +17,14 @@
 
 
 ## Descrição
-O jogo NIM é um jogo matemático de estratégia simples para dois jogadores. O jogo começa com um certo número de peças, que são divididas em vários montes. Os jogadores alternam jogadas, escolhendo um ou mais montes e removendo algumas das peças. O jogador que remove a última peça vence.
+
+COMO FUNCIONA -> Este código é uma implementação do jogo NIM, o jogo é iniciado sorteando  aleatoriamente qual jogador começa e atualiza a interface para exibir as bolinhas.
+Durante o jogo, cada jogador pode remover uma ou mais bolinhas de uma coluna, e o objetivo é ser o último a remover uma bolinha. Depois de remove a ultima bolinha e atualizado a interface para mostrar as bolinhas removidas e verifica se o jogo acabou, e o botão "Recomeçar" reinicia o jogo, resetando as bolinhas.
+
+TECNOLOGIAS USADAS -> A aplicação está utilizando JavaScript, HTML, CSS e o framework Bootstrap v5 para a interface.
+
+DESAFIOS ENCONTRADOS -> As funções deram um pouco de trabalho.
+
 
 ## Como Executar
 
@@ -26,18 +33,16 @@ Para acessar o jogo click no [link](https://ATIVIDADE-9.wagner-santos-d.repl.co)
 
 ## Regras do Jogo
 
-- O jogo começa com um número qualquer de montes de peças, com um número qualquer de peças em cada monte.
-- Os jogadores jogam alternadamente, começando pelo jogador um.
-- Em cada jogada, um jogador escolhe um monte e remove dele um número qualquer de peças. O jogador deve remover pelo menos uma peça em cada jogada.
-- O jogo termina quando todas as peças tiverem sido removidas.
-- O jogador que remover a última peça é o vencedor.
+- Ter dois jogadores. 
+- pode remover qualquer quantidade de bolinhas sendo da mesma coluna.
+- O vencedor será o que remover a ultima bolinha.
 
 
 ## Como Jogar
 
-- No jogo NIM, os jogadores se alternam nas jogadas para remover um ou mais palitos de fósforo de um ou mais montes. 
-- O número de palitos que podem ser removidos em cada jogada é determinado pelo jogador, mas pelo menos um palito deve ser removido a cada jogada.
-- O objetivo do jogo é remover o último palito, e o jogador que conseguir fazer isso vence.
+- No jogo NIM, os jogadores se alternam nas jogadas para remover uma ou mais bolinhas de um ou mais montes. 
+- O número de bolinhas que podem ser removidos em cada jogada é determinado pelo jogador, mas pelo menos um palito deve ser removido a cada jogada.
+- O objetivo do jogo é remover o última bolinha, e o jogador que conseguir fazer isso vence.
 - A ordem de jogada é determinada por sorteio no início do jogo.
 
 ##  Créditos
