@@ -10,7 +10,7 @@
 
 4. [Como Jogar](##Como Jogar) 
 
-5. [Créditos](##Créditos) 
+5. [Créditos](#Créditos) 
 
 6. [Licença do projeto](https://github.com/WagnerDuart/JOGO-NIM/blob/main/LISENSE) 
 
