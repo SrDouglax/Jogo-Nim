@@ -25,7 +25,7 @@ function encerraJogo(pBolinha, player) {
 
     let reco = document.getElementById("caixa");
     reco.innerHTML =
-      '<a id="jogar" class="btn btn-primary mt-2" onmousedown="reiniciarJogo()" role="button">Recomeça</a>';
+      '<a id="jogar" class="btn btn-primary mt-2" onmousedown="reiniciarJogo()" role="button">Recomeçar</a>';
     document.getElementById("vezDeQuem").textContent =
       "O jogo acabou. O Jogador " + (player + 1) + " venceu!";
     document.getElementById("bolinhas").style.cssText =
