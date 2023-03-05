@@ -94,6 +94,7 @@ ul {
   width: 80%;
   max-width: 800px;
   margin: auto;
+  margin: 0;
 }
 
 #play1,
@@ -147,6 +148,7 @@ ul {
   justify-content: center;
   display: none;
   width: 80%;
+  max-width: 800px;
 }
 
 body.started > .dec {
