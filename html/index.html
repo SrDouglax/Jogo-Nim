@@ -4,90 +4,96 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+  <!-- Main Imports -->
   <link rel="stylesheet" href="../css/style.css">
   <script src="../js/index.js" defer></script>
   <script src="../js/bootstrap-nim.js"></script>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <title>Jogo Nim</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
+  <title>Jogo Nim</title>
 
 </head>
 <body>
-  <h1 class="text-center mt-4 "> Jogo Nim</h1>
+  <div class="dec"></div>
+  <div class="dec"></div>
+  <div class="dec"></div>
+  <div class="dec"></div>
+  <!-- Title -->
+  <h1 class="text-center mt-4 title"> <span>J</span><span>o</span><span>g</span><span>o</span> <span>N</span><span>I</span><span>M</span></h1>
 
   <div class="inicio justify-content-center d-flex mt-4 ">
-
     <div class="container">
-
       <div class=" justify-content-between d-flex row" id="plays">
         <div class="text-center col-4" id="play1" >
-          <h3>Play 1</h3>
-          <!-- <p id="pontos0">Bolinhas removidas: 0</p> -->
+          <h3>Jogador 1</h3>
+          <p id="pontos0">Bolinhas removidas: 0</p>
         </div>
         <div class="text-center col-4" id="play2">
-          <h3>Play 2</h3>
-          <!-- <p id="pontos1">Bolinhas removidas: 0</p> -->
+          <h3>Jogador 2</h3>
+          <p id="pontos1">Bolinhas removidas: 0</p>
         </div>
       </div>
 
-      <div id="caixa"><a id="jogar" class="btn btn-primary"  role="button" onmousedown="jogar()">Play</a></div>
-      <!-- *************** -->
+      <a id="jogar" class="btn btn-primary"  role="button" onmousedown="jogar()">Play</a>
       <div class=" row align-items-center d-flex" id="bolinhas">
         <div class="col" id="primeiro">
           <ul id="compo-de-jogo">
-            <li> <img id="img-01" class="bolinha" onmouseover="pintaBolinha(0, 1)" onmouseout="despintaBolinha(0, 1)" onmousedown="removeBolinha(0, 1)" src="../images/bola.png" alt=""> </li>
+            <li> <div id="img-01" class="bolinha" onmouseover="pintaBolinha(0, 1)" onmouseout="despintaBolinha(0, 1)" onmousedown="removeBolinha(0, 1)" > <div></div> </div> </li>
           </ul>  
         </div>
         <div class="col" id="segundo">
           <ul id="compo-de-jogo">
-            <li> <img id="img-11" class="bolinha" onmouseover="pintaBolinha(1, 1)" onmouseout="despintaBolinha(1, 1)" onmousedown="removeBolinha(1, 1)" src="../images/bola.png" alt=""> </li>
+            <li> <div id="img-11" class="bolinha" onmouseover="pintaBolinha(1, 1)" onmouseout="despintaBolinha(1, 1)" onmousedown="removeBolinha(1, 1)" > <div></div> </div> </li>
 
-            <li> <img id="img-12" class="bolinha" onmouseover="pintaBolinha(1, 2)" onmouseout="despintaBolinha(1, 2)" onmousedown="removeBolinha(1, 2)" src="../images/bola.png" alt=""> </li>
+            <li> <div id="img-12" class="bolinha" onmouseover="pintaBolinha(1, 2)" onmouseout="despintaBolinha(1, 2)" onmousedown="removeBolinha(1, 2)" > <div></div> </div> </li>
           </ul>
         </div> 
         <div class="col" id="terceiro">
           <ul id="compo-de-jogo">
-            <li> <img id="img-21" class="bolinha" onmouseover="pintaBolinha(2, 1)" onmouseout="despintaBolinha(2, 1)" onmousedown="removeBolinha(2, 1)" src="../images/bola.png" alt=""> </li>
+            <li> <div id="img-21" class="bolinha" onmouseover="pintaBolinha(2, 1)" onmouseout="despintaBolinha(2, 1)" onmousedown="removeBolinha(2, 1)" > <div></div> </div> </li>
 
-            <li> <img id="img-22" class="bolinha" onmouseover="pintaBolinha(2, 2)" onmouseout="despintaBolinha(2, 2)" onmousedown="removeBolinha(2, 2)" src="../images/bola.png" alt=""> </li>
+            <li> <div id="img-22" class="bolinha" onmouseover="pintaBolinha(2, 2)" onmouseout="despintaBolinha(2, 2)" onmousedown="removeBolinha(2, 2)" > <div></div> </div> </li>
 
-            <li> <img id="img-23" class="bolinha" onmouseover="pintaBolinha(2, 3)" onmouseout="despintaBolinha(2, 3)" onmousedown="removeBolinha(2, 3)" src="../images/bola.png" alt=""> </li>
+            <li> <div id="img-23" class="bolinha" onmouseover="pintaBolinha(2, 3)" onmouseout="despintaBolinha(2, 3)" onmousedown="removeBolinha(2, 3)" > <div></div> </div> </li>
           </ul>
         </div> 
         <div class="col" id="quarto">
           <ul id="compo-de-jogo">
-            <li> <img id="img-31" class="bolinha" onmouseover="pintaBolinha(3, 1)" onmouseout="despintaBolinha(3, 1)" onmousedown="removeBolinha(3, 1)" src="../images/bola.png" alt=""> </li>
+            <li> <div id="img-31" class="bolinha" onmouseover="pintaBolinha(3, 1)" onmouseout="despintaBolinha(3, 1)" onmousedown="removeBolinha(3, 1)" > <div></div> </div> </li>
 
-            <li> <img id="img-32" class="bolinha" onmouseover="pintaBolinha(3, 2)" onmouseout="despintaBolinha(3, 2)" onmousedown="removeBolinha(3, 2)" src="../images/bola.png" alt=""> </li>
+            <li> <div id="img-32" class="bolinha" onmouseover="pintaBolinha(3, 2)" onmouseout="despintaBolinha(3, 2)" onmousedown="removeBolinha(3, 2)" > <div></div> </div> </li>
 
-            <li> <img id="img-33" class="bolinha" onmouseover="pintaBolinha(3, 3)" onmouseout="despintaBolinha(3, 3)" onmousedown="removeBolinha(3, 3)" src="../images/bola.png" alt=""> </li>
+            <li> <div id="img-33" class="bolinha" onmouseover="pintaBolinha(3, 3)" onmouseout="despintaBolinha(3, 3)" onmousedown="removeBolinha(3, 3)" > <div></div> </div> </li>
 
-            <li> <img id="img-34" class="bolinha" onmouseover="pintaBolinha(3, 4)" onmouseout="despintaBolinha(3, 4)" onmousedown="removeBolinha(3, 4)" src="../images/bola.png" alt=""> </li>
+            <li> <div id="img-34" class="bolinha" onmouseover="pintaBolinha(3, 4)" onmouseout="despintaBolinha(3, 4)" onmousedown="removeBolinha(3, 4)" > <div></div> </div> </li>
           </ul>
         </div> 
         <div class="col" id="quarto">
           <ul id="compo-de-jogo">
-            <li> <img id="img-41" class="bolinha" onmouseover="pintaBolinha(4, 1)" onmouseout="despintaBolinha(4, 1)" onmousedown="removeBolinha(4, 1)" src="../images/bola.png" alt=""> </li>
+            <li> <div id="img-41" class="bolinha" onmouseover="pintaBolinha(4, 1)" onmouseout="despintaBolinha(4, 1)" onmousedown="removeBolinha(4, 1)" > <div></div> </div> </li>
 
-            <li> <img id="img-42" class="bolinha" onmouseover="pintaBolinha(4, 2)" onmouseout="despintaBolinha(4, 2)" onmousedown="removeBolinha(4, 2)" src="../images/bola.png" alt=""> </li>
+            <li> <div id="img-42" class="bolinha" onmouseover="pintaBolinha(4, 2)" onmouseout="despintaBolinha(4, 2)" onmousedown="removeBolinha(4, 2)" > <div></div> </div> </li>
 
-            <li> <img id="img-43" class="bolinha" onmouseover="pintaBolinha(4, 3)" onmouseout="despintaBolinha(4, 3)" onmousedown="removeBolinha(4, 3)" src="../images/bola.png" alt=""> </li>
+            <li> <div id="img-43" class="bolinha" onmouseover="pintaBolinha(4, 3)" onmouseout="despintaBolinha(4, 3)" onmousedown="removeBolinha(4, 3)" > <div></div> </div> </li>
 
-            <li> <img id="img-44" class="bolinha" onmouseover="pintaBolinha(4, 4)" onmouseout="despintaBolinha(4, 4)" onmousedown="removeBolinha(4, 4)" src="../images/bola.png" alt=""> </li>
+            <li> <div id="img-44" class="bolinha" onmouseover="pintaBolinha(4, 4)" onmouseout="despintaBolinha(4, 4)" onmousedown="removeBolinha(4, 4)" > <div></div> </div> </li>
 
-            <li> <img id="img-45" class="bolinha" onmouseover="pintaBolinha(4, 5)" onmouseout="despintaBolinha(4, 5)" onmousedown="removeBolinha(4, 5)" src="../images/bola.png" alt=""> </li>
+            <li> <div id="img-45" class="bolinha" onmouseover="pintaBolinha(4, 5)" onmouseout="despintaBolinha(4, 5)" onmousedown="removeBolinha(4, 5)" > <div></div> </div> </li>
           </ul>
         </div> 
       </div>
-
-<!-- ************ -->
+      <h2 id="vezDeQuem"></h2>
       <div>
         <div class="row">
-          <h2 id="vezDeQuem"></h2>
         </div>
       </div>
     </div>

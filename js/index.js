@@ -7,25 +7,26 @@ pBolinha[1] = 0;
 var comecou = false;
 
 function jogar() {
-  document.getElementById("caixa").remove();
+  document.getElementById("jogar").remove();
   player = Math.floor(Math.random() * 2);
   playAtualizar(player);
   comecou = true;
   document.getElementById("bolinhas").style.cssText =
     "display: flex !important";
   console.log(document.getElementById("bolinhas"));
+  document.getElementById("vezDeQuem").style.display = "flex";
+  document.getElementById("play1").style.display = "flex";
+  document.getElementById("play2").style.display = "flex";
+  document.body.className = "started";
 }
 
 function encerraJogo(pBolinha, player) {
   if (pBolinha[0] + pBolinha[1] == 15) {
-    let comeco = document.querySelector(".container");
+    let container = document.querySelector(".container");
     let reiniciar = document.createElement("div");
-    reiniciar.id = "caixa";
-    comeco.appendChild(reiniciar);
+    container.appendChild(reiniciar);
+    reiniciar.outerHTML = '<a id="jogar" class="btn btn-primary mt-2" onmousedown="reiniciarJogo()" role="button">Recomeçar</a>';
 
-    let reco = document.getElementById("caixa");
-    reco.innerHTML =
-      '<a id="jogar" class="btn btn-primary mt-2" onmousedown="reiniciarJogo()" role="button">Recomeçar</a>';
     document.getElementById("vezDeQuem").textContent =
       "O jogo acabou. O Jogador " + (player + 1) + " venceu!";
     document.getElementById("bolinhas").style.cssText =
@@ -40,23 +41,22 @@ function playAtualizar(player) {
 }
 
 function bolinAtualizar(atBolinha) {
-  // document.getElementById("pontos" + atBolinha).textContent =
-  //   "Bolinhas removidas: " + pBolinha[atBolinha];
+  document.getElementById("pontos" + atBolinha).textContent =
+    "Bolinhas removidas: " + pBolinha[atBolinha];
 }
 
 function pintaBolinha(tabColuna, tabLinha) {
   for (let i = bolinha[tabColuna]; i <= tabLinha; i++) {
     document.getElementById("img-" + tabColuna + i).src = "/images/bola.png";
-    document.getElementById("img-" + tabColuna + i).style.backgroundColor =
-      "#0000ff";
+    document.getElementById("img-" + tabColuna + i).style.cssText =
+      "background-color: #dd300c; outline: 4px solid #fff;";
   }
 }
 
 function despintaBolinha(tabColuna, tabLinha) {
   for (let i = bolinha[tabColuna]; i <= tabLinha; i++) {
-    document.getElementById("img-" + tabColuna + i).src = "/images/bola.png";
-    document.getElementById("img-" + tabColuna + i).style.backgroundColor =
-      "transparent";
+    document.getElementById("img-" + tabColuna + i).style.cssText =
+      "";
   }
 }
 
@@ -66,9 +66,11 @@ function removeBolinha(tabColuna, tabLinha) {
     for (let i = bolinha[tabColuna]; i <= tabLinha; i++) {
       let atuBolinha = document.getElementById("img-" + tabColuna + i);
 
-      atuBolinha.src = "/images/sem.png";
       atuBolinha.id = "vazio-" + tabColuna + i;
-      atuBolinha.style.backgroundColor = "transparent";
+      atuBolinha.style.cssText =
+        "background-color: transparent; outline: none; box-shadow: none;";
+      atuBolinha.children[0].style.cssText =
+        "background-color: transparent; outline: none; box-shadow: none;";
       atuBolinha.disabled = true;
 
       bolinha[tabColuna]++;
@@ -95,7 +97,11 @@ function reiniciarJogo() {
 
       atuBolinha.id = "img-" + i + j;
 
-      atuBolinha.src = "/images/bola.png";
+      atuBolinha.style.cssText =
+        "";
+      atuBolinha.children[0].style.cssText =
+        "";
+      atuBolinha.disabled = true;
     }
   }
 
@@ -103,7 +109,7 @@ function reiniciarJogo() {
   pBolinha[0] = 0;
   pBolinha[1] = 0;
 
-  document.getElementById("caixa").remove();
+  document.getElementById("jogar").remove();
   document.getElementById("bolinhas").style.cssText =
     "display: flex !important";
 
