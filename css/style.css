@@ -5,12 +5,7 @@
   border-radius: 5px;
   margin-top: 2px;
 }
-conteiner{
-  align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-}
+
 ul{
   list-style-type: none;
 }
@@ -59,3 +54,9 @@ ul{
     align-items: center;
     justify-content: center;
   }
+.container{
+  align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}

@@ -18,7 +18,7 @@ function jogar() {
 
 function encerraJogo(pBolinha, player) {
   if (pBolinha[0] + pBolinha[1] == 15) {
-    let comeco = document.getElementById("bolinhas");
+    let comeco = document.querySelector(".container");
     let reiniciar = document.createElement("div");
     reiniciar.id = "caixa";
     comeco.appendChild(reiniciar);
@@ -28,7 +28,8 @@ function encerraJogo(pBolinha, player) {
       '<a id="jogar" class="btn btn-primary mt-2" onmousedown="reiniciarJogo()" role="button">Recomeça</a>';
     document.getElementById("vezDeQuem").textContent =
       "O jogo acabou. O Jogador " + (player + 1) + " venceu!";
-
+    document.getElementById("bolinhas").style.cssText =
+      "display: none !important";
     return true;
   }
 }
@@ -103,8 +104,8 @@ function reiniciarJogo() {
   pBolinha[1] = 0;
 
   document.getElementById("caixa").remove();
-  // document.getElementById("pontos0").textContent = "Bolinhas removidas: 0";
-  // document.getElementById("pontos1").textContent = "Bolinhas removidas: 0";
+  document.getElementById("bolinhas").style.cssText =
+    "display: flex !important";
 
   player = Math.floor(Math.random() * 2);
   playAtualizar(player);
