@@ -2,13 +2,13 @@
 
 ## Sumário
 
-1. [Descrição](##Descrição)
+1. [Descrição](#Descrição)
 
-2. [Como Executar](##Como Executar) 
+2. [Como Executar](#Como Executar) 
 
-3. [Regras do Jogo](##Regras do Jogo) 
+3. [Regras do Jogo](#Regras do Jogo) 
 
-4. [Como Jogar](##Como Jogar) 
+4. [Como Jogar](#Como Jogar) 
 
 5. [Créditos](#Créditos) 
 
