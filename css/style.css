@@ -153,6 +153,7 @@ ul {
   display: none;
   width: 80%;
   max-width: 550px;
+  font-size: 2rem;
 }
 
 body.started > .dec {
