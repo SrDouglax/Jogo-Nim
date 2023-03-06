@@ -109,6 +109,8 @@ function reiniciarJogo() {
   pBolinha[0] = 0;
   pBolinha[1] = 0;
 
+  bolinAtualizar(0)
+  bolinAtualizar(1)
   document.getElementById("jogar").remove();
   document.getElementById("bolinhas").style.cssText =
     "display: flex !important";
